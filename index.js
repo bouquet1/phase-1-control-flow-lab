@@ -31,21 +31,53 @@ return result
 //   }
 // }
 
-function ternaryCheckCity(city){
-  if(city === 'NYC') {
-    return "Ok, sounds good."
-  } else {
-    return 'No go.'
-  }
+// function ternaryCheckCity(city){
+//   if(city === 'NYC') {
+//     return "Ok, sounds good."
+//   } else {
+//     return 'No go.'
+//   }
+// }
+
+function ternaryCheckCity(isCity) {
+  return (isCity === 'NYC' ? 'Ok, sounds good.' : "No go.");
 }
 
+console.log(ternaryCheckCity('Hawai'));
 
-function switchOnCharmFromTip(tipAmount){
-  if(tipAmount === 'generous') {
-    return 'Thank you so much.'
-  } else if(tipAmount === 'not as generous'){
-    return "Thank you."
-  } else {
-    return "Bye."
+// const city = 'Hawai'
+// let isCity;
+// city === 'NYC' ? (isCity = 'Ok, sounds good.') : (isCity = 'No go.');
+// isCity;
+
+const tipAmount = 'generous';
+
+function switchOnCharmFromTip(tipAmount) {
+    switch (tipAmount) {
+      case 'generous':
+        tipAmount = 'generous';
+        return 'Thank you so much.';
+        break;
+      case 'not as generous':
+        tipAmount = 'not as generous';
+        return 'Thank you.';
+        break;
+      default:
+        return 'Bye.';
+        break;
+    }
   }
-}
+  console.log(switchOnCharmFromTip('generous'));
+
+
+// function switchOnCharmFromTip(tipAmount){
+//   if(tipAmount === 'generous') {
+//     return 'Thank you so much.'
+//   } else if(tipAmount === 'not as generous'){
+//     return "Thank you."
+//   } else {
+//     return "Bye."
+//   }
+// }
+
+
